@@ -1,0 +1,23 @@
+{
+  "name": "vet-helper",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "jest"
+  },
+  "author": "Liuba",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}

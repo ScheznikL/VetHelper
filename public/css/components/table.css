@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table > thead > tr, table > tbody > tr:nth-of-type(even) {
+    background: rgba(255, 221, 102, 0.5);
+}
+
+table > thead > tr > th:nth-of-type(even), table > tbody > tr > td:nth-of-type(even) {
+    background: rgba(243, 198, 228, 0.5);
+}
+
+table th, table td {
+    padding: 16px;
+    font-family: Montserrat;
+}

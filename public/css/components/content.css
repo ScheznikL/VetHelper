@@ -1,0 +1,44 @@
+#wrapper {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+}
+
+main {
+    width: 75%;
+    background: #F3C6E4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>.content {
+    width: 90%;
+    height: 90%;
+    border-radius: 60px;
+
+    background: #FFA1AA;
+}
+
+main>.content>h2 {
+    background: white;
+    font-family: Montserrat;
+    border-top-left-radius: 60px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 70px;
+
+    display: inline-block;
+}
+
+main>.content>.inner-content {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: white;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding: 30px;
+    overflow-y: auto;
+}

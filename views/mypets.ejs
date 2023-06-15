@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css">
+
+    <link rel="stylesheet" href="/libs/font-awesome/all.min.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/components/navigation.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/content.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/table.css" type="text/css">
+    <link rel="stylesheet" href="/css/pages/mypets.css" type="text/css">
+</head>
+
+<body>
+
+<div id="wrapper">
+    <%- include("./components/navigation.ejs") %>
+
+    <main>
+        <div class="content">
+            <h2>Усі звернення</h2>
+
+            <div class="inner-content">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Ім'я тваринки</th>
+                        <th>Дата звернення</th>
+                        <th>Причина звернення</th>
+                        <th>Назначення</th>
+                        <th>Раціон</th>
+                        <th>Профілактика</th>
+                        <th>Діагноз</th>
+                        <th>Аналізи</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (let i = 0; i < pets.length; i++) { %>
+                        <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= pets[i].name %></td>
+                            <td><%= pets[i].dateOfApplication %></td>
+                            <td><%= pets[i].reasonOfApplication %></td>
+                            <td><%= pets[i].receipt %></td>
+                            <td><%= pets[i].ration %></td>
+                            <td><%= pets[i].prevention %></td>
+                            <td><%= pets[i].diagnosis %></td>
+                            <td><%= pets[i].analyses %></td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

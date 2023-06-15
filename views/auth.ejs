@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css">
+
+    <link rel="stylesheet" href="/libs/font-awesome/all.min.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/components/navigation.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/content.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/table.css" type="text/css">
+    <link rel="stylesheet" href="/css/pages/auth.css" type="text/css">
+
+    <script src="/js/auth.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <div class="content">
+        <header>
+            <button id="login" class="active">Вхід</button>
+            <button id="register">Реєстрація</button>
+        </header>
+        <div class="account-type">
+            <button id="owner">
+                <img src="/imgs/collar.png" alt="Collar">
+                <h3>Власник</h3>
+            </button>
+            <button id="veterinarian">
+                <img src="/imgs/medicine_box.png" alt="Medicine Box">
+                <h3>Ветеринар</h3>
+            </button>
+        </div>
+        <div class="login">
+            <input type="email" placeholder="Ел. пошта">
+            <input type="password" placeholder="Пароль">
+
+            <div>
+                <button id="login-user">Увійти</button>
+            </div>
+        </div>
+        <div class="register" data-type="owner">
+            <input type="text" placeholder="ПІБ" class="pib">
+            <input type="email" placeholder="Ел. пошта">
+            <input type="password" placeholder="Пароль">
+
+            <div>
+                <button id="register-owner">Зареєструватися</button>
+            </div>
+        </div>
+        <div class="register" data-type="veterinarian">
+            <input type="text" placeholder="ПІБ" class="pib">
+            <input type="email" placeholder="Ел. пошта">
+            <input type="password" placeholder="Пароль">
+            <input type="text" placeholder="Посада" class="position">
+
+            <div>
+                <button id="register-veterinarian">Зареєструватися</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

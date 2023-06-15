@@ -1,0 +1,49 @@
+.input-group {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.input-group>label {
+    font-family: Montserrat;
+    font-size: 24px;
+    margin-right: 16px;
+    min-width: 20%;
+}
+
+.input-group>input, .input-group>select {
+    font-family: Montserrat;
+    font-size: 20px;
+
+    width: 100%;
+    background: #F1E6E9;
+    border: 3px solid transparent;
+    border-radius: 16px;
+    padding: 8px 16px;
+    outline: none;
+}
+
+.input-group>input:focus {
+    border: 3px solid #FFA1AA;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+button#add {
+    font-family: Montserrat;
+    font-size: 20px;
+
+    background: #F1E6E9;
+    border: 3px solid #FFA1AA;
+    border-radius: 16px;
+    padding: 16px 32px;
+    transition: 0.15s all ease-in-out;
+    cursor: pointer;
+}
+
+button#add:hover {
+    background: #FFA1AA;
+}

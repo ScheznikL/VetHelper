@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css">
+
+    <link rel="stylesheet" href="/libs/font-awesome/all.min.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/components/navigation.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/content.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/table.css" type="text/css">
+    <link rel="stylesheet" href="/css/pages/main.css" type="text/css">
+</head>
+
+<body>
+
+<div id="wrapper">
+    <%- include("./components/navigation.ejs") %>
+
+    <main>
+        <div class="content">
+            <h2>Власники</h2>
+
+            <div class="inner-content">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>ПІБ</th>
+                        <th>Імена улюбленців</th>
+                        <th>E-mail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (var i = 0; i < owners.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= owners[i].pib %></td>
+                            <td><%= owners[i].pets %></td>
+                            <td><%= owners[i].email %></td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

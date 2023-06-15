@@ -1,0 +1,30 @@
+<div class="nav">
+    <div class="header">
+        <span>
+            <i class="fa-solid fa-user"></i>
+            <h2><%= user.name %></h2>
+        </span>
+    </div>
+
+    <ul>
+        <% if (user.role === "veterinarian") { %>
+            <li class="<%= activePage === "owners" ? "active" : "" %>"><a href="/owners">Власники</a></li>
+            <li class="<%= activePage === "patients" ? "active" : "" %>"><a href="/patients">Пацієнти</a></li>
+            <li class="<%= activePage === "patient-new" ? "active" : "" %>"><a href="/patient/new">Додати пацієнта</a>
+            </li>
+        <% } %>
+        <% if (user.role === "owner") { %>
+            <li class="<%= activePage === "mypets" ? "active" : "" %>"><a href="/mypets">Мої тваринки</a></li>
+            </li>
+        <% } %>
+    </ul>
+
+    <div class="footer">
+        <span id="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <h2>Вийти</h2>
+        </span>
+    </div>
+</div>
+
+<script src="/js/main.js"></script>

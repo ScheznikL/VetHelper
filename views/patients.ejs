@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css">
+
+    <link rel="stylesheet" href="/libs/font-awesome/all.min.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/components/navigation.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/content.css" type="text/css">
+    <link rel="stylesheet" href="/css/components/table.css" type="text/css">
+    <link rel="stylesheet" href="/css/pages/patients.css" type="text/css">
+</head>
+
+<body>
+
+<div id="wrapper">
+    <%- include("./components/navigation.ejs") %>
+
+    <main>
+        <div class="content">
+            <h2>Пацієнти</h2>
+
+            <div class="inner-content">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>E-mail</th>
+                        <th>Ім'я тваринки</th>
+                        <th>Стать</th>
+                        <th>Вік</th>
+                        <th>Порода</th>
+                        <th>Дата звернення</th>
+                        <th>Причина звернення</th>
+                        <th>Назначення</th>
+                        <th>Раціон</th>
+                        <th>Профілактика</th>
+                        <th>Діагноз</th>
+                        <th>Аналізи</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% for (let i = 0; i < patients.length; i++) { %>
+                        <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= patients[i].ownerEmail %></td>
+                            <td><%= patients[i].name %></td>
+                            <td><%= patients[i].sex %></td>
+                            <td><%= patients[i].age %></td>
+                            <td><%= patients[i].type %></td>
+                            <td><%= patients[i].dateOfApplication %></td>
+                            <td><%= patients[i].reasonOfApplication %></td>
+                            <td><%= patients[i].receipt %></td>
+                            <td><%= patients[i].ration %></td>
+                            <td><%= patients[i].prevention %></td>
+                            <td><%= patients[i].diagnosis %></td>
+                            <td><%= patients[i].analyses %></td>
+                        </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
